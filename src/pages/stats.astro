@@ -1,0 +1,74 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
+
+<BaseLayout title="Roberto Guarneros - Stats" description="GitHub stats and contribution metrics">
+  <div class="stats-container">
+    <h1>📊 GitHub Stats</h1>
+    <p class="subtitle">My GitHub activity and metrics updated daily via GitHub Actions</p>
+
+    <section class="stat-section">
+      <h2>Daily Metrics</h2>
+      <div class="stat-card">
+        <img src="/metrics.svg" alt="Daily GitHub Metrics" class="stat-image" />
+      </div>
+    </section>
+
+    <section class="stat-section">
+      <h2>3D Contribution Graph</h2>
+      <div class="stat-card">
+        <img src="/contrib-3d.svg" alt="3D Contribution Graph" class="stat-image" />
+      </div>
+    </section>
+  </div>
+</BaseLayout>
+
+<style>
+  .stats-container {
+    max-width: 1000px;
+    margin: 0 auto;
+  }
+
+  .subtitle {
+    font-size: 1.125rem;
+    margin-bottom: 3rem;
+    opacity: 0.8;
+  }
+
+  .stat-section {
+    margin-bottom: 4rem;
+  }
+
+  .stat-section h2 {
+    margin-bottom: 1.5rem;
+  }
+
+  .stat-card {
+    background-color: var(--bg-secondary);
+    border: 1px solid var(--border);
+    border-radius: 1rem;
+    padding: 2rem;
+    transition: var(--transition);
+  }
+
+  .stat-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+  }
+
+  [data-theme="dark"] .stat-card:hover {
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+  }
+
+  .stat-image {
+    width: 100%;
+    height: auto;
+    border-radius: 0.5rem;
+  }
+
+  @media (max-width: 768px) {
+    .stat-card {
+      padding: 1rem;
+    }
+  }
+</style>

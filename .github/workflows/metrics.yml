@@ -22,7 +22,7 @@ jobs:
           plugin_streak: yes
           plugin_streak_days: 7,30
           config_timezone: Europe/Madrid
-          filename: metrics.svg
+          filename: public/metrics.svg
           output_action: commit
           committer_branch: main
           committer_message: "chore: update metrics.svg"
@@ -42,7 +42,7 @@ jobs:
           plugin_languages_details: percentage
           plugin_languages_threshold: 0%
           config_timezone: Europe/Madrid
-          filename: languages.svg
+          filename: public/languages.svg
           output_action: commit
           committer_branch: main
           committer_message: "chore: update languages.svg"
@@ -59,9 +59,9 @@ jobs:
           USERNAME: robertguarneros
 
       - name: Select theme
-        run: cp -f profile-3d-contrib/profile-night-rainbow.svg contrib-3d.svg
+        run: cp -f profile-3d-contrib/profile-night-rainbow.svg public/contrib-3d.svg
 
       - uses: stefanzweifel/git-auto-commit-action@v5
         with:
           commit_message: "chore: update contrib-3d.svg"
-          file_pattern: contrib-3d.svg
+          file_pattern: public/contrib-3d.svg

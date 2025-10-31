@@ -1,0 +1,248 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
+
+<BaseLayout title="Roberto Guarneros - CV" description="Curriculum Vitae of Roberto Guarneros">
+  <div class="cv-container">
+    <div class="cv-header">
+      <h1>📄 Curriculum Vitae</h1>
+      <a href="/cv.pdf" download class="download-btn">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+          <polyline points="7 10 12 15 17 10"></polyline>
+          <line x1="12" y1="15" x2="12" y2="3"></line>
+        </svg>
+        Download PDF
+      </a>
+    </div>
+
+    <section class="cv-section">
+      <h2>🎓 Education</h2>
+      <div class="cv-item">
+        <h3>Aerospace Engineering</h3>
+        <p class="institution">University</p>
+        <p class="description">
+          Specialized in spacecraft systems and satellite technology.
+        </p>
+      </div>
+      <div class="cv-item">
+        <h3>Network Engineering</h3>
+        <p class="institution">University</p>
+        <p class="description">
+          Focus on network architecture, security, and infrastructure management.
+        </p>
+      </div>
+    </section>
+
+    <section class="cv-section">
+      <h2>💼 Professional Experience</h2>
+      <div class="cv-item">
+        <h3>Nanosat Lab</h3>
+        <p class="position">Software Engineer</p>
+        <p class="description">
+          Developed software for the 3Cat-8 on-board computer, contributing to satellite mission success.
+        </p>
+        <ul class="achievements">
+          <li>Designed and implemented critical on-board computer software</li>
+          <li>Collaborated with multidisciplinary teams on satellite systems</li>
+          <li>Ensured software reliability for space environment</li>
+        </ul>
+      </div>
+      <div class="cv-item">
+        <h3>SEAT-CUPRA</h3>
+        <p class="position">Solutions Developer</p>
+        <p class="description">
+          Collaborated on innovative solutions to streamline car development processes and reduce costs.
+        </p>
+        <ul class="achievements">
+          <li>Developed tools to optimize development workflows</li>
+          <li>Implemented cost-reduction strategies</li>
+          <li>Enhanced collaboration between engineering teams</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="cv-section">
+      <h2>🛠️ Skills</h2>
+      <div class="skills-grid">
+        <div class="skill-category">
+          <h3>Programming Languages</h3>
+          <ul>
+            <li>Python</li>
+            <li>TypeScript / JavaScript</li>
+            <li>C / C#</li>
+            <li>Java</li>
+            <li>Dart</li>
+          </ul>
+        </div>
+        <div class="skill-category">
+          <h3>Frameworks & Tools</h3>
+          <ul>
+            <li>Node.js</li>
+            <li>Angular</li>
+            <li>Flutter</li>
+            <li>Docker</li>
+            <li>Git</li>
+          </ul>
+        </div>
+        <div class="skill-category">
+          <h3>Infrastructure</h3>
+          <ul>
+            <li>Linux Administration</li>
+            <li>Apache / Nginx</li>
+            <li>Database Management</li>
+            <li>Network Security</li>
+            <li>DevOps</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="cv-section">
+      <h2>🚀 Projects</h2>
+      <div class="cv-item">
+        <h3>3Cat-8 On-Board Computer Software</h3>
+        <p class="description">
+          Mission-critical software for satellite operations and data processing.
+        </p>
+      </div>
+      <div class="cv-item">
+        <h3>SEAT-CUPRA Development Tools</h3>
+        <p class="description">
+          Internal tools for streamlining automotive development workflows.
+        </p>
+      </div>
+    </section>
+
+    <section class="cv-section">
+      <h2>📫 Contact</h2>
+      <p>
+        <a href="https://linkedin.com/in/roberto-guarneros" target="_blank" rel="noopener noreferrer">
+          LinkedIn: roberto-guarneros
+        </a>
+      </p>
+    </section>
+  </div>
+</BaseLayout>
+
+<style>
+  .cv-container {
+    max-width: 900px;
+    margin: 0 auto;
+  }
+
+  .cv-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 3rem;
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+
+  .download-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.75rem 1.5rem;
+    background: linear-gradient(135deg, var(--accent), #8b5cf6);
+    color: white;
+    text-decoration: none;
+    border-radius: 0.5rem;
+    font-weight: 600;
+    transition: var(--transition);
+  }
+
+  .download-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 16px rgba(59, 130, 246, 0.3);
+  }
+
+  .cv-section {
+    margin-bottom: 4rem;
+    padding-bottom: 2rem;
+    border-bottom: 1px solid var(--border);
+  }
+
+  .cv-section:last-child {
+    border-bottom: none;
+  }
+
+  .cv-section h2 {
+    margin-bottom: 2rem;
+  }
+
+  .cv-item {
+    margin-bottom: 2.5rem;
+  }
+
+  .cv-item:last-child {
+    margin-bottom: 0;
+  }
+
+  .cv-item h3 {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .institution,
+  .position {
+    color: var(--accent);
+    font-weight: 600;
+    margin-bottom: 0.75rem;
+    font-size: 1.1rem;
+  }
+
+  .description {
+    margin-bottom: 1rem;
+    line-height: 1.7;
+  }
+
+  .achievements {
+    list-style-position: inside;
+    color: var(--text-secondary);
+    line-height: 1.8;
+  }
+
+  .achievements li {
+    margin-bottom: 0.5rem;
+  }
+
+  .skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+  }
+
+  .skill-category h3 {
+    font-size: 1.25rem;
+    margin-bottom: 1rem;
+    color: var(--accent);
+  }
+
+  .skill-category ul {
+    list-style: none;
+    padding: 0;
+  }
+
+  .skill-category li {
+    padding: 0.5rem 0;
+    color: var(--text-secondary);
+    border-bottom: 1px solid var(--border);
+  }
+
+  .skill-category li:last-child {
+    border-bottom: none;
+  }
+
+  @media (max-width: 768px) {
+    .cv-header {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+
+    .skills-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>
