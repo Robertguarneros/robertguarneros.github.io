@@ -38,6 +38,34 @@ All commands are run from the root of the project, from a terminal:
 | `pnpm astro ...`       | Run CLI commands like `astro add`, `astro check` |
 | `pnpm astro -- --help` | Get help using the Astro CLI                     |
 
-## 👀 Want to learn more?
-
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+```bash
+robertguarneros.github.io/
+├── 📁 .github/workflows/          # GitHub Actions automation
+│   ├── deploy.yml                 # Deploys your Astro site
+│   └── metrics.yml                # Updates GitHub stats daily
+│
+├── 📁 public/                     # Static files (served as-is)
+│   ├── CNAME                      # Your custom domain
+│   ├── CV_README.md               # Instructions for CV PDF
+│   └── *.svg                      # Your GitHub stats images
+│
+├── 📁 src/                        # Source code (processed by Astro)
+│   ├── 📁 content/                # Content collections (blog posts)
+│   │   ├── blog/welcome.md        # Sample blog post
+│   │   └── config.ts              # Defines blog schema
+│   │
+│   ├── 📁 layouts/                # Reusable page templates
+│   │   └── BaseLayout.astro       # Main layout with nav & theme
+│   │
+│   └── 📁 pages/                  # Routes (file = URL path)
+│       ├── index.astro            # / (About Me)
+│       ├── stats.astro            # /stats
+│       ├── cv.astro               # /cv
+│       └── blog/
+│           ├── index.astro        # /blog (list of posts)
+│           └── [slug].astro       # /blog/{post-name}
+│
+├── astro.config.mjs               # Astro configuration
+├── package.json                   # Dependencies & scripts
+└── tsconfig.json                  # TypeScript configuration
+```
