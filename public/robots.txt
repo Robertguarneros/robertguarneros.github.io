@@ -1,0 +1,6 @@
+# Allow all robots to crawl everything
+User-agent: *
+Allow: /
+
+# Sitemap location
+Sitemap: https://roberto.is-a.dev/sitemap-index.xml
