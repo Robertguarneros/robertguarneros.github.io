@@ -2,7 +2,7 @@ name: Update profile metrics
 
 on:
   schedule:
-    - cron: "17 6 * * *"   # daily
+    - cron: "17 6 2 * *"   # monthly
   workflow_dispatch:
 
 # allows the built-in GITHUB_TOKEN to commit files
